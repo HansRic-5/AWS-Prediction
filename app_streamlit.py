@@ -93,12 +93,10 @@ if st.button("Predict", type="primary"):
 
         st.write("Class probabilities:")
         st.bar_chart(
-            {
-                "probability": [
-                    {"class": "stayed",  "probability": probs[0]},
-                    {"class": "churned", "probability": probs[1]},
-                ]
-            },
+            [
+                {"class": "stayed",  "probability": probs[0]},
+                {"class": "churned", "probability": probs[1]},
+            ],
             x="class",
             y="probability",
         )
